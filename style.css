@@ -1,0 +1,307 @@
+body,h1, h2, p{
+    margin: 0;
+    padding: 0;
+
+}
+
+h1{
+    font-size: 7rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.7rem;
+}
+
+.wrap{
+    position: relative;
+    margin: auto;
+    width: 1150px;
+
+}
+
+.texttopspace{
+    padding-top: 100px;
+}
+
+.image-container{
+    position: relative;
+    display: inline-block;
+}
+
+.pt1{
+    position: relative;
+    background: #e7e7e0;
+    color: #1c1c1b;;
+    height: 1700px;
+    padding-top: 500px;
+    overflow: hidden;
+}
+
+.pt1img1{
+    position: absolute;
+    width: 30%;
+    top: 45%;
+    
+}
+
+.pt1img2{
+    position: absolute;
+    width: 20%;
+    top: 10%;
+    right: 10%;
+    transform: rotate(70deg);
+    z-index: 1;
+}
+
+.pt1lastimg{
+    position: absolute;
+    width: 60%;
+    right: -25%;
+    top: 65%;
+    transform: rotate(330deg);
+}
+
+
+.pt1tittle2{
+    padding-top: 500px;
+}
+
+.pt2{
+    position: relative;
+    background: #131936;
+    color: #e7e7e0;
+    padding-top: 200px;
+    height: 1000px;
+}
+
+.pt2bkimg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    filter: grayscale(80%);
+}
+
+.pt2bkimg2{
+    position: absolute;
+    top: 5%;
+    right: 7%;
+}
+
+.pt2tittle{
+   position: relative;
+}
+
+.pt2textbox{
+    position: absolute;
+    padding-top: 200px;
+    right: 10%;
+}
+
+
+
+
+
+.pt2-5{
+    position: relative;
+    height: 800px;
+    background: #e7e7e0;
+}
+
+.pt2-5img1{
+    position: absolute;
+    width: 40%;
+    top: -70%;
+    left: -8%;
+    transform: rotate(210deg);
+}
+
+.pt2-5img2{
+    position: absolute;
+    width: 30%;
+    top: 0%;
+    left: 10%;
+    transform: rotate(230deg);
+    z-index: 5;
+}
+
+.pt2-5img3{
+    position: absolute;
+    width: 20%;
+    top: 30%;
+    left: 13%;
+    transform: rotate(260deg);
+    z-index: 1;
+}
+
+.pt2-5img4{
+    position: absolute;
+    width: 23%;
+    top: 30%;
+    left: 30%;
+    transform: rotate(60deg);
+}
+
+.pt2-5img5{
+    position: absolute;
+    width: 12%;
+    top: 55%;
+    left: 35%;
+    transform: rotate(250deg);
+}
+
+.pt2-5img6{
+    position: absolute;
+    width: 5%;
+    top: 65%;
+    left: 47%;
+    transform: rotate(60deg);
+}
+
+.pt2-5img7{
+    position: absolute;
+    width: 12%;
+    top: 50%;
+    left: 47%;
+    transform: rotate(300deg);
+}
+
+.pt2-5img8{
+    position: absolute;
+    width: 7%;
+    top: 77%;
+    left: 53%;
+    transform: rotate(20deg);
+}
+
+.pt2-5img9{
+    position: absolute;
+    width: 12%;
+    top: 76%;
+    left: 53%;
+    transform: rotate(250deg);
+    z-index: 10;
+}
+
+.pt2-5img10{
+    position: absolute;
+    width: 7%;
+    bottom: -14%;
+    left: 65%;
+    transform: rotate(200deg);
+    z-index: 10;
+}
+
+.pt2-5img11{
+    position: absolute;
+    width: 3%;
+    bottom: -20%;
+    left: 60%;
+    transform: rotate(30deg);
+    z-index: 10;
+}
+
+.pt2-5img12{
+    position: absolute;
+    width: 2%;
+    bottom: -27%;
+    left: 65%;
+    transform: rotate(100deg);
+    z-index: 10;
+}
+
+
+
+.pt3{
+    position: relative;
+    background: black;
+    color: #e7e7e0;
+    padding-top: 200px;
+    height: 5000px;
+}
+
+.pt3textbox{
+    padding-top: 100px;
+}
+
+.pt3bkimg1{
+    position: absolute;
+    top: -3%;
+    right: 0;
+    z-index: 10;
+
+    filter: grayscale(80%);
+}
+
+.pt3bkimg2{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    z-index: 1;
+}
+
+ /* 기본 설정 */
+
+
+
+        /* 1. 처음에 텍스트가 다 함께 움직이는 구간 (더미 공간) */
+        .intro-spacer {
+            height: 40vh; /* 화면 상단에 닿기 전까지의 거리 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* 2. 인터렉션 핵심 컨테이너 */
+        .shutter-container {
+            /* 이 높이값이 겹쳐지는 애니메이션의 스크롤 길이를 결정합니다 (길수록 천천히 겹쳐짐) */
+            height: 300vh; 
+            position: relative;
+            background: #e7e7e0;
+        }
+
+        /* 화면 상단에 닿으면 고정되는 영역 */
+        .shutter-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh; /* 화면 크기만큼 고정 */
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 개별 텍스트 레이어 */
+        .text-layer {
+            position: absolute;
+            font-family: sans-serif;
+            font-size: 11vw; /* 화면 크기에 반응하는 거대한 폰트 */
+            font-weight: 900;
+            letter-spacing: -0.08em; /* 글자 간격을 좁혀 겹칠 때의 시각적 효과 극대화 */
+            line-height: 1;
+            color: #4e0000;
+            white-space: nowrap;
+            will-change: transform; /* 애니메이션 성능 최적화 */
+            
+            /* CSS 변수(--i)를 사용해 초기 Y 위치를 서로 다르게 벌려놓음 */
+            /* top 위치: 기본 여백 15vh + (인덱스 * 간격 10vh) */
+            top: calc(15vh + (var(--i) * 10vh));
+        }
+
+.intro-img1{
+    position: absolute;
+}
+
+.intro-img2{
+    position: absolute;
+    filter: grayscale(90%);
+}
+
+
+
+

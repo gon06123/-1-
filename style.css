@@ -282,7 +282,7 @@ p{
             font-family: sans-serif;
             font-size: 11vw; /* 화면 크기에 반응하는 거대한 폰트 */
             font-weight: 900;
-            letter-spacing: -0.08em; /* 글자 간격을 좁혀 겹칠 때의 시각적 효과 극대화 */
+            letter-spacing: -0.1em; /* 글자 간격을 좁혀 겹칠 때의 시각적 효과 극대화 */
             line-height: 1;
             color: #4e0000;
             white-space: nowrap;
